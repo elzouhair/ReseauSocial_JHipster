@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.elkili.mypackage"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "reseausocialjh",
+    "packageName": "com.elkili.mypackage",
+    "packageFolder": "com/elkili/mypackage",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NjNhYjRlMWU1MTI5OGNlMDdkNjI2YmRkZGRlNDNkZTMwYjU2NDM2MWZjZjUyMmNiM2ViZmFkZmFkYzU5MmNjNDBhYjkwNWViZWFmNWZhM2MxM2YyYjUxZmJlZWMxZmVkYTBjZjNmYzBiYzZjNDE1MmM2YmU4N2ZkZmQ4ZWQ1ODQ=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false
+  }
+}
