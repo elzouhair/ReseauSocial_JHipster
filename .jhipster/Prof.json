@@ -1,0 +1,23 @@
+{
+    "name": "Prof",
+    "fields": [
+        {
+            "fieldName": "nomProf",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenomProf",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200105000405",
+    "entityTableName": "prof",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

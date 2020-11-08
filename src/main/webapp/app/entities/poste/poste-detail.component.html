@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="poste">
+            <h2><span>Poste</span> {{poste.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{poste.description}}</span>
+                </dd>
+                <dt><span>Type</span></dt>
+                <dd>
+                    <span>{{poste.type}}</span>
+                </dd>
+                <dt><span>Fichier</span></dt>
+                <dd>
+                    <div *ngIf="poste.fichier">
+                        <a (click)="openFile(poste.fichierContentType, poste.fichier)">open</a>
+                        {{poste.fichierContentType}}, {{byteSize(poste.fichier)}}
+                    </div>
+                </dd>
+                <dt><span>User</span></dt>
+                <dd>
+                    {{poste.userLogin}}
+                </dd>
+                <dt><span>comments</span></dt>
+                <div class="table-responsive" *ngIf="commentaires?.length > 0">
+                    <table class="table table-striped">
+                        <thead>
+                            <th><span>User</span></th>
+                            <th><span>Commentaire</span></th>
+                        </thead>
+                        <tr *ngFor="let commentaire of commentaires" >
+
+                                <td *ngIf="commentaire.posteId==poste.id" >
+                                    {{commentaire.userLogin}}
+                                </td>
+                                <td *ngIf="commentaire.posteId==poste.id">
+                                    {{commentaire.commentaire}}
+                                </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/poste', poste.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+            <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-commentaire"
+                    [routerLink]="['/commentaire/new']">
+                <fa-icon [icon]="'plus'"></fa-icon>
+                <span >
+                Add new Commentaire
+                </span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "name": "Eleve",
+    "fields": [
+        {
+            "fieldName": "nomEleve",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenomEleve",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200105000404",
+    "entityTableName": "eleve",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

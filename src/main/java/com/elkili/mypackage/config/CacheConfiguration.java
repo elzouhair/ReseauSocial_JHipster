@@ -43,6 +43,11 @@ public class CacheConfiguration {
             createCache(cm, com.elkili.mypackage.domain.User.class.getName());
             createCache(cm, com.elkili.mypackage.domain.Authority.class.getName());
             createCache(cm, com.elkili.mypackage.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.elkili.mypackage.domain.Poste.class.getName());
+            createCache(cm, com.elkili.mypackage.domain.Poste.class.getName() + ".commentaires");
+            createCache(cm, com.elkili.mypackage.domain.Commentaire.class.getName());
+            createCache(cm, com.elkili.mypackage.domain.Eleve.class.getName());
+            createCache(cm, com.elkili.mypackage.domain.Prof.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="commentaire">
+            <h2><span>Commentaire</span> {{commentaire.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Commentaire</span></dt>
+                <dd>
+                    <span>{{commentaire.commentaire}}</span>
+                </dd>
+                <dt><span>User</span></dt>
+                <dd>
+                    {{commentaire.userLogin}}
+                </dd>
+                <dt><span>Poste</span></dt>
+                <dd>
+                    <div *ngIf="commentaire.posteId">
+                        <a [routerLink]="['/poste', commentaire.posteId, 'view']">{{commentaire.posteId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/commentaire', commentaire.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+entity Poste {
+	description String
+    type Type 
+	fichier Blob 
+}
+enum Type {
+  COURS,
+  TP,
+  EXAMEN
+}
+entity Commentaire {
+	commentaire String
+}
+entity Eleve {
+	nomEleve String
+    prenomEleve String
+}
+entity Prof {
+	nomProf String
+    prenomProf String
+}
+
+
+relationship ManyToOne {
+	Poste{User(login) required} to User
+    Commentaire{User(login) required} to User
+	Commentaire{poste} to Poste {commentaire}
+}
+
+
+// Set pagination options
+paginate Eleve, Commentaire , Poste , Prof  with infinite-scroll
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
